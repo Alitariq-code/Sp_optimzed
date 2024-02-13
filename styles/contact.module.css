@@ -1,0 +1,288 @@
+.contact_parent_container {
+  background-image: url('/images/contact-images/Mask group.webp');
+  background-size: cover; /* This will make sure the background image covers the entire container */
+  background-position: center; /* This centers the background image within the container */
+  width: 100%;
+  height: 478px;
+}
+.contact_main_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 380px;
+  flex-wrap: wrap;
+}
+
+.inputContainer {
+  position: relative;
+  margin-bottom: 15px;
+}
+.input {
+  /* Your existing styles for the input field */
+  padding-right: 40px; /* Adjust this value based on your design */
+}
+.icon {
+  position: absolute;
+  top: 33%;
+ left: 1%; /* Adjust this value based on your design */
+  transform: translateY(-50%);
+}
+/* Add similar styles for other input fields if needed */
+.contact_main_wrapper h2 {
+  font-size: 44px;
+  color: #fff;
+  margin-bottom: 0px;
+}
+.contact_main_wrapper p {
+  font-size: 22px;
+  color: #fff;
+}
+.color_container {
+  color: #00ecd4;
+}
+.getInTouch_main_wrapper {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.getInTouch_wrapper {
+  width: 40%;
+}
+.getInTouch_main_wrapper h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 42px;
+}
+.contact_container {
+  width: 60%;
+}
+.contact_us_image {
+  width: 100%;
+  height: 100%;
+}
+.submit_btn {
+  background: linear-gradient(260.54deg, #009583 4.76%, #00955f 93.93%);
+  width: 244px;
+  height: 53px;
+  border: 1px solid;
+  border-radius: 30px;
+}
+.container {
+  width: 100%;
+  padding: 20px;
+  text-align: right;
+}
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  background: transparent;
+  padding-left: 30px;
+}
+.textarea {
+  height: 350px;
+  color: #fff;
+}
+.input {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #fff;
+}
+.wrapper_6 {
+  margin: 50px auto;
+}
+.wrapper_6 h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 34px;
+}
+.page_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.heading {
+  color: #fff;
+  letter-spacing: 5px;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  padding: 0px 15px;
+}
+.accordion {
+  max-width: 750px;
+  width: calc(100% - 20px);
+}
+.accordion details {
+  /* background-color: #011826; */
+  margin-bottom: 10px;
+  border: 1px #fff solid; /* Add border when closed */
+  border-radius: 5px; /* Add border-radius for rounded corners when closed */
+  color: #fff;
+}
+.accordion details[open] {
+  border: 1px #fff solid; /* Add border when open */
+  border-radius: 5px; /* Add border-radius for rounded corners when open */
+}
+.accordion details > summary {
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion details > summary::after {
+  content: '\002B'; /* Unicode character for plus icon */
+  font-size: 1.2em;
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+.accordion details[open] > summary::after {
+  content: '\2212'; /* Unicode character for minus icon */
+  margin-left: 5px;
+  transition: transform 0.3s;
+  transform: rotate(180deg);
+}
+.accordion p {
+  padding: 10px 20px;
+}
+
+
+@media screen and (min-width:1800px){
+  .contact_parent_container {
+    height: 600px;
+  }
+  .contact_main_wrapper h2 {
+    font-size: 68px;
+  }
+  .contact_main_wrapper p {
+    font-size: 22px;
+    color: #fff;
+  }
+
+  .getInTouch_main_wrapper h3 {
+    font-size: 68px;
+  }
+  .wrapper_6 h3 {
+    font-size: 68px;
+  }
+
+  .icon {
+  top: 34%;
+  left: 1%;
+}
+
+.accordion {
+  max-width: 1230px;
+  width: calc(100% - 20px);
+}
+
+
+.accordion details > summary {
+  font-size: 22px;
+}
+.accordion details > summary::after {
+  font-size: 20px;
+
+}
+.accordion p {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.input,
+.textarea {
+  font-size: 20px;
+  padding-left: 45px;
+}
+}
+
+
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+  .icon {
+    top: 34%;
+   
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 250px) {
+  .getInTouch_wrapper {
+    width: 90%;
+  }
+  .contact_container {
+    width: 90%;
+  }
+  .contact_main_wrapper p {
+    font-size: 22px;
+    color: #fff;
+    padding: 20px;
+  }
+  .getInTouch_main_wrapper {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .input,
+  .textarea {
+    padding-left: 64px;
+  }
+}
+@media screen and (max-width: 540px) and (min-width: 250px) {
+ .submit_btn{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+  .contact_us_image {
+    width: 90%;
+    height: 100%;
+  }
+  .icon {
+    position: absolute;
+    top: 33%;
+    left:2%; /* Adjust this value based on your design */
+    transform: translateY(-50%);
+  }
+  .accordion details > summary {
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .accordion p {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  .contact_main_wrapper h2 {
+    font-size: 30px;
+   
+  }
+
+  .contact_main_wrapper p {
+    font-size: 14px;
+   
+  }
+
+  .wrapper_6 h3 {
+    font-size: 30px;
+  }
+
+  .getInTouch_main_wrapper h3 {
+    font-size: 30px;
+  }
+  .input,
+  .textarea {
+    padding-left: 50px;
+  }
+}

@@ -1,0 +1,138 @@
+.laptop_slider {
+  margin: 0px;
+  padding: 0px;
+}
+.main-section {
+  display: flex;
+  margin: 20px;
+  width: 29%;
+  justify-content: center;
+
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  width: 240px;
+}
+
+.slider img {
+  width: 100%;
+  object-fit: fill;
+
+  cursor: pointer;
+  align-self: center;
+}
+
+.img:hover {
+  cursor: pointer;
+}
+
+#front {
+  /* z-index: 1; */
+  object-fit: fill;
+  z-index: 1; /* Use a whole number, e.g., 1, to bring it to the top layer */
+}
+
+.slider img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: fill;
+  cursor: pointer;
+  margin-right: -85px;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  justify-content: end;
+}
+.div1 {
+  height: 5px;
+  width: 26px;
+  background-color: #a4a4a4;
+  margin: 20px;
+}
+
+
+
+
+
+@media screen and (min-width: 1800px) {
+
+  .container {
+   
+  padding-left: 32%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+
+
+}
+@media screen and (max-width: 1280px) and (min-width: 250px) {
+  .main-section {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 100%;
+  }
+  .slider {
+    display: flex;
+    width: 45%;
+    justify-content: center;
+    margin: auto;
+  }
+  .container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding-left: 70px;
+  }
+
+}
+
+@media screen and (max-width: 540px) and (min-width: 500px) {
+
+
+  .main-section {
+    display: flex;
+    margin: auto;
+    justify-content: left;
+    width: 100%;
+  }
+  .slider {
+    display: flex;
+    width: 444px;
+    justify-content: center;
+    margin: auto;
+  }
+  .container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding-left: 0px;
+
+    
+  }
+
+
+
+
+}
+@media screen and (max-width: 940px) and (min-width: 500px) {
+.slider-container{
+display: flex;
+justify-content: center;
+align-items: center;
+max-width: 500px;
+margin: auto;
+
+}
+}

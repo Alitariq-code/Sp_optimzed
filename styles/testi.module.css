@@ -1,0 +1,123 @@
+.wrapper{
+    width: 90%;
+}
+.slick_slider{
+    width: 90%;
+}
+
+.sm_slider_wrapper{
+    border: 1px solid white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-self: center;
+}
+.sm_slider_wrapper img{
+   width : 150px;
+   align-self: center;
+
+}
+
+
+/* .slick_slider */
+
+.sm_slider_content{
+    padding: 10px 30px;
+    color: white;
+    font-size: 13px;
+}
+.title_wrapper{
+    display: flex;
+}
+
+.title_wrapper p:first-of-type{
+  margin-right: 30px;
+}
+.title_wrapper p{
+    margin: 10px 0px 0px 0px;
+    padding: 10px 0px;
+}
+.slider_image{
+    align-self: center;
+    border-radius: 50%;
+}
+.slider_image img{
+    border-radius: 50%;
+}
+.blockquote:before,
+.blockquote:after {
+  color: #fff; /* Set the color to white */
+  content: open-quote;
+  font-size: 30px;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  margin-left: -15px; /* Use margin-left instead of margin-right for closing quote */
+  vertical-align: -0.4em;
+}
+
+.blockquote:after {
+  content: close-quote;
+  font-size: 30px;
+  line-height: .25em; /* Adjust the line-height property */
+  margin-left: 0.25em;
+  margin-top: 1.25em; 
+  vertical-align: -0.4em;
+}
+.blockquote {
+    margin: 0;
+  }
+  @media screen and (min-width:1800px){
+
+    .sm_slider_content{
+        padding: 25px 51px;
+        color: white;
+        font-size: 22px;
+    }
+    .sm_slider_wrapper img{
+        width : 200px;
+        align-self: center;
+     
+     }
+
+     .blockquote:before,
+     .blockquote:after {
+       color: #fff; /* Set the color to white */
+       content: open-quote;
+       font-size: 50px;
+       line-height: 0.1em;
+       margin-right: 0.25em;
+       margin-left: -35px; /* Use margin-left instead of margin-right for closing quote */
+       vertical-align: -0.4em;
+     }
+     
+     .blockquote:after {
+       content: close-quote;
+       font-size: 50px;
+       line-height: .25em; /* Adjust the line-height property */
+       margin-left: 0.25em;
+       margin-top: 1.25em; 
+       vertical-align: -0.4em;
+     }
+     .blockquote {
+        margin: 0;
+      }
+  }
+
+@media screen and (max-width:500px) and (min-width: 250px){
+
+.sm_slider_wrapper{
+    border: 1px solid white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sm_slider_content{
+    padding: 10px 10px;
+}
+}

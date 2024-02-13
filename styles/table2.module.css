@@ -1,0 +1,264 @@
+.custom_table {
+    border-collapse: collapse;
+    width: 70%;
+    height: 50%;
+    border: 1px transparent; /* Remove the outer border */
+    color: #fff;
+    margin: 40px auto;
+    background-image: url('/Group 4338.svg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    
+    margin-top: -9px;
+}
+
+
+
+.td1, .td, .td2, .td3 {
+    border-bottom: 0.5px solid white; /* Add border to individual cells */
+    padding: 10px;
+    text-align: center;
+    text-align: left;
+    padding: 20px 70px 20px 40px;
+    font-size: 12px;
+   
+}
+
+.td {
+    border-left: 1px solid #fff;
+}
+
+.td1 {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    width: 20%;
+    background: rgba(249, 249, 249, 0.24) 23.09%;
+    font-size: 12px;
+    text-align: left;
+    padding: 20px 70px 20px 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.td {
+    padding: 10px;
+    text-align: center;
+    text-align: left;
+    padding: 10px 70px 10px 40px;
+    background: rgba(31, 51, 63, 0.8);
+    width: 50%;
+    font-size: 12px;
+    text-align: center;
+ 
+}
+.td3{
+    border-left: 1px solid #fff;
+    background: rgba(249, 249, 249, 0.24) 23.09%;
+    text-align: center;
+}
+
+.td2 {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    width: 20%;
+    background: rgba(249, 249, 249, 0.24) 23.09%;
+    font-size: 12px;
+    text-align: left;
+    padding: 20px 70px 20px 40px;
+    color: #fff;
+    text-align: center;
+    border-left: 1px solid #fff;
+}
+
+/* Remove border-bottom for the last row */
+/* .custom_table tr:last-child .td1,
+.custom_table tr:last-child .td 
+.custom_table tr:last-child .td2{
+    border-bottom: none;
+} */
+
+/* Increase the font size for rows with class tr_large_font */
+.custom_table .tr_large_font .td1,
+.custom_table .tr_large_font .td {
+    font-size: 14px; /* Set the desired font size for the cells in the large font row */
+}
+.tr_heading{
+    font-weight: 900;
+
+
+}
+.td_heading{
+    
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    width: 20%;
+    background: rgba(249, 249, 249, 0.24) 23.09%;
+    font-size: 14px;
+    text-align: left;
+    padding: 20px 70px 20px 40px;
+    color: #fff;
+    text-align: center;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.td_heading1{
+    
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    width: 20%;
+    background: rgba(249, 249, 249, 0.24) 23.09%;
+    font-size: 14px;
+    text-align: left;
+    padding: 20px 70px 20px 40px;
+    color: #fff;
+    text-align: center;
+   
+    border-bottom: 1px solid #fff;
+}
+
+.td_heading2{
+    
+    
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+        width: 20%;
+        background: rgba(249, 249, 249, 0.24) 23.09%;
+        font-size: 14px;
+        text-align: left;
+        padding: 20px 70px 20px 40px;
+        color: #fff;
+        text-align: center;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    
+}
+@media screen and (min-width:1800px){
+
+
+
+    .td_heading,  .td_heading1, .td_heading2{
+        font-size: 24px;
+    
+    }
+
+
+    .td1, .td, .td2, .td3 {
+  font-size: 22px;
+       
+    }
+    .td1, .td {
+       
+        font-size: 24px;
+    }
+    .td_heading2{ background: rgba(31, 51, 63, 0.8);
+  
+
+    }
+}
+
+
+@media screen and (min-width:1800px){
+.td1, .td {
+   
+    font-size: 14px;
+}}
+
+@media screen and (max-width: 1080px) and (min-width: 500px) {
+    .td1, .td, .td2 {
+        background: rgba(31, 51, 63, 0.8);
+
+    }}
+    
+
+@media screen and (max-width:540px) and (min-width: 250px){
+    .custom_table {
+        border-collapse: collapse;
+        width: 90%;
+      
+        border: none; /* Remove the outer border */
+        color: #fff;
+        margin: 40px auto;
+    }
+    .td1 {
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+        width: 10%;
+       
+        font-size: 12px;
+        text-align: left;
+        padding: 8px 10px 8px 8px;
+        color: #fff;
+    }
+    .td_heading{
+    
+        padding: 8px 0px 8px 0px
+      
+    }
+    .td_heading1{
+    
+        padding: 8px 10px 8px 8px;
+      
+    }
+    .td {
+        padding: 10px;
+        text-align: center;
+        text-align: left;
+        padding: 8px 10px 8px 8px;
+    
+        width: 20%;
+        font-size: 12px;
+    }
+
+    .td1, .td {
+        border-bottom: 0.5px solid white; /* Add border to individual cells */
+        padding: 10px;
+        text-align: center;
+        text-align: left;
+        padding: 10px 10px 11px 20px;
+        font-size: 12px;
+    }
+.td2{
+    text-align: center;
+    width: 20%;
+    background: rgba(249, 249, 249, 0.24) 23.09%;
+    font-size: 12px;
+    text-align: left;
+    padding: 10px 10px 11px 20px;
+    color: #fff;
+    text-align: center;
+    border-left: 1px solid #fff;}
+    .td1, .td, .td2 {
+        background: rgba(31, 51, 63, 0.8);
+        text-align: center;
+        padding: 10px 10px 11px 20px;
+    }
+
+    .td_heading2{
+        background: rgba(249, 249, 249, 0.24) 23.09%;
+
+    }
+
+    .td_heading2 {
+        padding: 10px;
+        text-align: center;
+        width: 20%;
+        background: rgba(249, 249, 249, 0.24) 23.09%;
+        font-size: 14px;
+        text-align: left;
+        padding: 20px 20px 20px 40px;
+        color: #fff;
+        text-align: center;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+}
+
