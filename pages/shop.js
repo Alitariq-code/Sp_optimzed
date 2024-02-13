@@ -7,21 +7,10 @@ import Image from 'next/image';
 import ImageGallery from '../pages/components/shop_slider';
 import styles from '../styles/shop.module.css';
 
-
-
-
-import Image2 from '../public/images/Shop/wrapper2.webp';
-import Image5 from '../public/images/Shop/Group 3897 (1).webp';
 import tiny_Yet_image from '../public/images/Home-images/Product Image.webp';
-import Image3 from '../public/images/Shop/Group 982.webp';
-import Image4 from '../public/images/Shop/Group 983.webp';
-// import Image6 from '../public/images/Shop/Group 3843.webp';
-import Image7 from '../public/images/Shop/Group.webp';
-import Group2 from '../public/images/Shop/Group2.webp';
-import Group3 from '../public/images/Shop/Group3.webp';
-import Group4 from '../public/images/Shop/Group4.webp';
-import Group5 from '../public/images/Shop/Group5.webp';
-import Group6 from '../public/images/Shop/Group6.webp';
+// import hardware from '../public/images/Shop/Hardware-Details-icons'
+
+
 import Testimonials from './components/testi';
 import TablePage from './components/table';
 import Link from 'next/link';
@@ -36,18 +25,18 @@ function shop() {
     const fetchImages = async () => {
       try {
         const allImageNames = [
-          '/public/images/Shop/wrapper2.webp',
-          '/public/images/Shop/Group 3897 (1).webp',
-          '/public/images/Shop/Group 982.webp',
-          '/public/images/Shop/Group 983.webp',
+          '/public/images/Shop/SmallerScreenProductOverview.webp',
+          '/public/images/Shop/DownloadAppNow.webp',
+          '/public/images/Shop/AppStoreImage.webp',
+          '/public/images/Shop/GooglePlayImage.webp',
           '/public/images/Home-images/Product Image.webp',
-          '/public/images/Shop/Group6.webp',
-          '/public/images/Shop/Group.webp',
-          '/public/images/Shop/Group2.webp',
-          '/public/images/Shop/Group3.webp',
+          '/public/images/Shop/Hardware-Details-icons/Hardware-icons (6).webp',
+          '/public/images/Shop/Hardware-Details-icons/Hardware-icons (1).webp',
+          '/public/images/Shop/Hardware-Details-icons/Hardware-icons (2).webp',
+          '/public/images/Shop//Hardware-Details-icons/Hardware-icons (3).webp',
           '/public/images/Shop/Group 3843.webp',
-          '/public/images/Shop/Group4.webp',
-          '/public/images/Shop/Group5.webp',
+          '/public/images/Shop/Hardware-Details-icons/Hardware-icons (4).webp',
+          '/public/images/Shop/Hardware-Details-icons/Hardware-icons (5).webp',
         ];
 
         // Start loading images asynchronously

@@ -70,7 +70,7 @@ const NavBar = () => {
           </li>
           <li className={styles.nav_item}>
             <Link
-              href="/enterprise"
+              href="/BeyondOrdinary"
               passHref
               className={styles.nav_links}
               onClick={handleClick}

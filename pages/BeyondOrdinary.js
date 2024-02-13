@@ -6,11 +6,6 @@ import Spinner from './components/Spinner';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import image1 from '../public/images/Beyond Ordinary/banner.webp';
-import image2 from '../public/images/Beyond Ordinary/Group 3843.webp';
-import Image3 from '../public/images/Shop/Group 982.webp';
-import Image4 from '../public/images/Shop/Group 983.webp';
-import Image5 from '../public/images/Shop/Group 3897 (1).webp';
-import image6 from '../public/images/Beyond Ordinary/icons/1 (4).svg';
 import styles from '../styles/enterprise.module.css';
 
 function Enterprise() {
@@ -22,10 +17,10 @@ function Enterprise() {
       try {
         const allImageNames = [
           '/public/images/Beyond Ordinary/banner.webp',
-          '/public/images/Beyond Ordinary/Group 3843.webp',
-          '/public/images/Shop/Group 982.webp',
-          '/public/images/Shop/Group 983.webp',
-          '/public/images/Shop/Group 3897 (1).webp',
+          '/public/images/Beyond Ordinary/PrecisionPerfectedImage.webp',
+          '/public/images/Shop/AppStoreImage.webp',
+          '/public/images/Shop/GooglePlayImage.webp',
+          '/public/images/Shop/DownloadAppNow.webp',
         ];
 
         // Start loading images asynchronously

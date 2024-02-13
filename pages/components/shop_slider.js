@@ -2,9 +2,9 @@
 import { useState } from 'react';
 
 const ImageGallery = () => {
-  const [selectedImage, setSelectedImage] = useState('/Product Image.webp');
+  const [selectedImage, setSelectedImage] = useState('/images/Shop/Shop-slider/Product Image.webp');
 
-  const images = ['/2i.webp', '/3i.webp', '/4i.webp'];
+  const images = ['/images/Shop/Shop-slider/2i.webp', '/images/Shop/Shop-slider/3i.webp', '/images/Shop/Shop-slider/4i.webp'];
 
   const handleImageClick = (image) => {
     setSelectedImage(image);

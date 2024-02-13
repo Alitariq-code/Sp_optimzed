@@ -115,7 +115,7 @@ const MobileNavBar = () => {
 
           <span className={styles.box}>
             <Link
-              href="/enterprise"
+              href="/BeyondOrdinary"
               passHref
               className={styles.nav_links}
               onClick={handleClick}

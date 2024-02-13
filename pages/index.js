@@ -242,11 +242,6 @@ const Home = () => {
                 packed with advanced technology that provides detailed analysis
                 and feedback to improve your shooting Speed.
               </p>
-            </div>
-          </div>
-
-          <div className={styles.new_main_content1_wrapper}>
-            <div className={styles.container1_position}>
               <h3>
                 Ultimate Shooting
                 <span className={styles.color_container}> Companion</span>
@@ -260,6 +255,22 @@ const Home = () => {
               </p>
             </div>
           </div>
+
+          {/* <div className={styles.new_main_content1_wrapper}>
+            <div className={styles.container1_position}>
+              <h3>
+                Ultimate Shooting
+                <span className={styles.color_container}> Companion</span>
+              </h3>
+              <p>
+                Compatible with all firing types, from live and dry fire to
+                airsoft and even toy guns, ShotPulse is designed to be your
+                ultimate training companion. It's the perfect tool for everyone,
+                from seasoned marksmen to young enthusiasts and even kids in
+                training.
+              </p>
+            </div>
+          </div> */}
 
           {/*  */}
           <div className={styles.main_content_wrapper}>

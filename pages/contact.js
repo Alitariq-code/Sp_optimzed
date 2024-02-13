@@ -5,10 +5,9 @@ import NavBar from './components/NavBar';
 import MobileNavBar from './components/m_navbar';
 
 import Footer from './components/footer';
-import getInTouch from '../public/images/contact-images/Group-4027.svg';
-import userIcon from '../public/images/contact-images/solar_user-bold.webp'; // Update the path to your user icon
-import envelopeIcon from '../public/images/contact-images/Vector.webp'; // Update the path to your envelope icon
-import subjectIcon from '../public/images/contact-images/Vector.webp'; // Update the path to your subject icon
+import getInTouch from '../public/images/contact-images/getInTouchImage.svg';
+import NameInputIcon from '../public/images/contact-images/NameInputIcon.webp'; 
+import InputIcon from '../public/images/contact-images/InputIcon.webp'; 
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -147,7 +146,7 @@ function Contact() {
                 onChange={handleChange}
               />
               <Image
-                src={userIcon}
+                src={NameInputIcon}
                 alt="User Icon"
                 width={20}
                 height={20}
@@ -164,7 +163,7 @@ function Contact() {
                 onChange={handleChange}
               />
               <Image
-                src={envelopeIcon}
+                src={InputIcon}
                 alt="Envelope Icon"
                 width={20}
                 height={20}
@@ -181,7 +180,7 @@ function Contact() {
                 onChange={handleChange}
               />
               <Image
-                src={subjectIcon}
+                src={InputIcon}
                 alt="Subject Icon"
                 width={20}
                 height={20}

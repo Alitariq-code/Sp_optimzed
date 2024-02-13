@@ -53,7 +53,7 @@ const ImageSlider = ({ images }) => {
   );
 };
 
-const images = ['/small/middle.webp', '/small/left.webp', '/small/right.webp'];
+const images = ['/images/Home-hero-section-slider/middle.webp', '/images/Home-hero-section-slider/left.webp', '/images/Home-hero-section-slider/right.webp'];
 
 export default function MobileSlider() {
   return <ImageSlider images={images} />;

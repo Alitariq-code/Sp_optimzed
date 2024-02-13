@@ -69,7 +69,7 @@ const Footer = () => {
             <hr className={styles.hrStyle} />
             <li className={styles.footer_item}>
               <Link
-                href="/enterprise"
+                href="/BeyondOrdinary"
                 passHref
                 className={styles.footer_links}
                 onClick={handleClick}

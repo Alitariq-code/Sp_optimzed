@@ -173,20 +173,20 @@ const SliderDesktop = () => {
             <img
               className={`${styles.img} ${styles.image1} img1`}
               id="side1"
-              src="/small/left.webp"
+              src="/images/Home-hero-section-slider/left.webp"
               alt="Side Image 1"
             />
 
             <img
               className={`${styles.img} ${styles.image2} img2`}
               id="front"
-              src="/small/middle.webp"
+              src="/images/Home-hero-section-slider/middle.webp"
               alt="Front Image"
             />
             <img
               className={`${styles.img} ${styles.image3} img3`}
               id="side2"
-              src="/small/right.webp"
+              src="/images/Home-hero-section-slider/right.webp"
               alt="Side Image 2"
             />
           </div>

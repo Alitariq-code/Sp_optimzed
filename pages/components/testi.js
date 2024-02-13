@@ -73,42 +73,42 @@ function Testimonials() {
 
 const data = [
   {
-    img: '/Testimonials/4 mark.webp',
+    img: '/images/Testimonials/4 mark.webp',
     name: `Mike`,
     review: `As a range coach, I've seen plenty of shot timers, but ShotPulse stands out. Its recoil-based timing system is impressively accurate, giving us an edge in training precision shooters. The ease of setup and use makes it a favorite among my students.`,
     designation: 'Range Coach',
     profession: 'Professional Shooting Instructor',
   },
   {
-    img: '/Testimonials/2 jason.webp',
+    img: '/images/Testimonials/2 jason.webp',
     name: `Jason`,
     review: `As a student on a budget, I appreciate the affordability of ShotPulse. It's user-friendly, and its app has been a great tool for tracking my progress. It's helped me improve my shooting Speedsignificantly.`,
     designation: 'Student and Shooting Enthusiast.',
     profession: 'Student',
   },
   {
-    img: '/Testimonials/3 linda.webp',
+    img: '/images/Testimonials/3 linda.webp',
     name: `Linda`,
     review: `I'm new to shooting and was looking for something to help me practice at home. ShotPulse has been fantastic! It's easy to use, and the app is very intuitive. I love how it helps me track my improvement over time.`,
     designation: 'Recreational Shooter',
     profession: 'Home Maker',
   },
   {
-    img: '/Testimonials/4 mark.webp',
+    img: '/images/Testimonials/4 mark.webp',
     name: `Sgt. Mark`,
     review: `Having served in the military, I've seen the importance of precise shooting. ShotPulse's accuracy and real-time feedback have been invaluable for maintaining my skills. It's as close as you can get to professional-grade equipment for personal use.`,
     designation: 'Retired Military Personnel',
     profession: 'Veteran',
   },
   {
-    img: '/Testimonials/1 mile.webp',
+    img: '/images/Testimonials/1 mile.webp',
     name: `Emily`,
     review: `As a tech entrepreneur, I'm always interested in innovative gadgets. ShotPulse impressed me with its cutting-edge technology and seamless integration with its app. It's not just a tool for shooters; it's a showcase of smart technology in sports.`,
     designation: 'Tech Startup CEO',
     profession: 'Entrepreneur',
   },
   {
-    img: '/Testimonials/6 david.webp',
+    img: '/images/Testimonials/6 david.webp',
     name: `David`,
     review: `As a parent, I initially bought ShotPulse as an inexpensive tool to introduce my child to shooting with a toy gun. Surprisingly, it's become a valuable asset in teaching discipline and focus. The simplicity and effectiveness of ShotPulse make it an excellent choice for families interested in safe, educational shooting practice.`,
     designation: 'Father and Hobbyist Shooter',
