@@ -223,7 +223,7 @@ function Feature() {
           '/public/images/Feature Page Images/Quantitative Assessment.webp',
           '/public/images/Feature Page Images/Choose Your Drill.svg',
         ];
-        let loadingState = 0;
+
         // Start loading images asynchronously
         const loadImagePromises = allImageNames.map(async (imageName) => {
           const response = await fetch(
@@ -237,14 +237,11 @@ function Feature() {
 
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
-          loadingState += 100 / allImageNames.length;
-          console.log(loadingState);
 
-          setLoadingState(loadingState);
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
-        // Wait for all images to be loaded
+        // Wait for all images to be loadeloading={loadingState}d
         const loadedImagesData = await Promise.all(loadImagePromises);
 
         // Set the loaded images in the state
@@ -266,7 +263,7 @@ function Feature() {
     <>
       {loading && (
         <div>
-          <Spinner loading={loadingState} />
+          <Spinner />
         </div>
       )}
       <div>

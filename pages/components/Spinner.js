@@ -31,7 +31,6 @@ const Spinner = ({ loading }) => {
   return (
     <div style={spinnerContainerStyle} className={styles.spinnerContainer}>
       <Lottie options={lottieOptions} height={300} width={300} />
-      <div style={textStyle}>{loading ? loading : 0}%</div>
     </div>
   );
 };

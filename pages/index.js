@@ -41,7 +41,7 @@ import { useState, useEffect } from 'react';
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
-  const [loadingState, setLoadingState] = useState(0);
+
   useEffect(() => {
     const fetchImages = async () => {
       try {
@@ -51,9 +51,6 @@ const Home = () => {
           'public/images/Home-images/key-Feater-Image/keyFeaterIcon2.webp',
           '/public/images/Home-images/Elevate-Your-Marksmanship/ElevateYourMarksmanship.gif',
         ];
-
-        // Initialize loading state
-        let loadingState = 0;
 
         // Start loading images asynchronously
         const loadImagePromises = allImageNames.map(async (imageName) => {
@@ -66,11 +63,6 @@ const Home = () => {
           const lastIndex = imageName.lastIndexOf('/');
 
           const last = imageName.substring(0, lastIndex);
-
-          loadingState += 100 / allImageNames.length;
-          console.log(loadingState);
-
-          setLoadingState(loadingState);
 
           return { name: last, data: URL.createObjectURL(blobData) };
         });
@@ -95,7 +87,7 @@ const Home = () => {
     <>
       {loading && (
         <div>
-          <Spinner loading={loadingState} />
+          <Spinner />
         </div>
       )}
       {!loading && (

@@ -19,7 +19,6 @@ import { useState, useEffect } from 'react';
 function shop() {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
-  const [loadingState, setLoadingState] = useState(0);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -38,7 +37,7 @@ function shop() {
           '/public/images/Shop/Hardware-Details-icons/Hardware-icons (4).webp',
           '/public/images/Shop/Hardware-Details-icons/Hardware-icons (5).webp',
         ];
-        let loadingState = 0;
+
         // Start loading images asynchronously
         const loadImagePromises = allImageNames.map(async (imageName) => {
           const response = await fetch(
@@ -52,10 +51,6 @@ function shop() {
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
 
-          loadingState += 100 / allImageNames.length;
-          console.log(loadingState);
-
-          setLoadingState(loadingState);
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
@@ -80,7 +75,7 @@ function shop() {
     <>
       {loading && (
         <div>
-          <Spinner loading={loadingState} />
+          <Spinner />
         </div>
       )}
       <div>

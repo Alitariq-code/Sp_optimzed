@@ -34,11 +34,6 @@ function blog() {
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
 
-          loadingState += 100 / allImageNames.length;
-          console.log(loadingState);
-
-          setLoadingState(loadingState);
-
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
@@ -62,7 +57,7 @@ function blog() {
     <>
       {loading && (
         <div>
-          <Spinner loading={loadingState} />
+          <Spinner />
         </div>
       )}
       <div>
