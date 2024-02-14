@@ -1,0 +1,831 @@
+.hr_bottom{
+  width: 99%;
+  border: 1px solid #959292;}
+
+
+.wrapper1 {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
+
+
+}
+
+.wrapper1 h2 {
+  color: #fff;
+  font-size: 44px;
+  margin-bottom: 0px;
+}
+
+.wrapper1 p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.8;
+ 
+}
+
+.wrapper1_left {
+  width: 50%;
+
+}
+
+.wrapper1_right {
+  width: 45%;
+  text-align: -webkit-right;
+  text-align: -moz-right;
+}
+
+.wrapper1_btn {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.wrapper1_btn h3 {
+  font-size: 30px;
+  margin: 0px 20px;
+  color: #fff;
+
+}
+
+.btn_cart {
+  width: 250px;
+  height: 50px;
+  background: linear-gradient(260.54deg, #009583 4.76%, #00955F 93.93%);
+  border: none;
+  border-radius: 25px;
+  /* Set to half of the button height for full rounding */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+.wrapper1_right {
+  width: 50%;
+}
+
+
+
+.wrapper5 img {
+  width: 73%;
+  height: 100%;  
+  margin: auto;
+  text-align: center;
+  display: flex;
+}
+
+.color_container {
+  color: #00ecd4;
+}
+
+
+
+
+
+
+
+.new_main_content_wrapper{
+  background-image: url('../public/shop-bg1.webp');
+  background-size: cover; /* This will make sure the background image covers the entire container */
+  background-position: center; /* This centers the background image within the container */
+  max-width: 1250px;
+  height: 500px;
+  margin: 30px auto;
+  
+
+}
+.container_position{
+  position: relative;
+  top: 80px;
+  left: 100px;
+  width: 500px;
+}
+.container_position h2 {
+  font-size: 36px;
+  color: #fff;
+  margin-top: 10px;
+}
+.container_position p {
+  font-size: 18px;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper2 {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 96%;
+  margin: auto;
+}
+
+.wrapper2_right {
+
+  width: 50%;
+}
+
+.wrapper2_left {
+
+  width: 45%;
+}
+
+.image2 {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper2_right h2 {
+  color: #fff;
+  font-size: 44px;
+  margin-bottom: 0px;
+}
+
+.wrapper2_right p {
+  color: #fff;
+  font-size: 20px;
+}
+
+.wrapper2_right img {
+  width: 100%;
+  
+}
+
+.tiny_Yet {
+  /* background-color: #011826; */
+  width: 90%;
+  border: 1px #fff solid;
+  border-radius: 20px;
+  margin: 50px auto;
+  padding: opx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-self: center;
+  padding: 20px;
+}
+
+.tiny_Yet h3 {
+  color: #fff;
+  font-size: 44px;
+  margin-top: 0px;
+}
+
+.tiny_Yet p {
+  font-size: 22px;
+  color: #fff;
+}
+
+.tiny_Yet1 {
+  width: 45%;
+  align-self: center;
+}
+
+.tiny_Yet_btn {
+  width: 250px;
+  height: 50px;
+  background: linear-gradient(90deg, #009583 100%, #00955f 100%);
+  border: none;
+  border-radius: 25px;
+  /* Set to half of the button height for full rounding */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+.wrapper5 {
+  width: 100%;
+}
+
+.wrapper5 h2 {
+  color: #fff;
+  font-size: 44px;
+  text-align: center;
+
+}
+.wrapper5_bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+
+}
+
+.wrapper5_bottom img {
+  width: 250PX;
+  height: 100%;
+  margin-top: 28PX;
+}
+
+.wrapper3 h2 {
+  color: #fff;
+  font-size: 44px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.wrapper3_main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper3_left {
+  width: 33%;
+  display: grid;
+}
+
+.wrapper3_border {
+  width: 90%;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.wrapper3_border h4 {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.wrapper3_border p {
+  color: #fff;
+  font-size: 11px;
+  margin-bottom: 0;
+}
+
+.wrapper3_border_span {
+  width: 7px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #00ECD4;
+  margin: 0px 10px;
+
+}
+
+.wrapper3_dot {
+  display: flex;
+  align-items: baseline;
+}
+
+.wrapper3_middle {
+  width: 33%;
+}
+
+.wrapper3_middle img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper3_right {
+  width: 33%;
+  padding-left: 10px;
+  display: grid;
+}
+
+.wrapper1_right .wrapper3_border {
+  width: 90%;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 70px auto;
+}
+
+.wrapper4 h2 {
+  color: #fff;
+  font-size: 44px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.testimonials_wrapper h2 {
+  font-size: 44px;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonials_wrapper {
+  margin: 40px auto;
+}
+.wrapper3_border img{
+  padding-bottom: 0px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+
+/* testing */
+
+@media screen and (min-width:1800px) {
+  .wrapper1 {
+    margin-bottom: 50px;
+    justify-content: space-between;
+  }
+  .wrapper1_left {
+    max-width: 980px;
+  }
+  .wrapper1_left h2 {
+    font-size: 68px;
+  }
+
+  .wrapper1 p {
+    font-size: 22px;
+    line-height: 1.8;
+
+  }
+
+
+  .new_main_content_wrapper{
+    background-image: url('../public/shop-bg1.webp');
+    background-size: cover; /* This will make sure the background image covers the entire container */
+    background-position: center; /* This centers the background image within the container */
+    max-width: 1650px;
+    height: 600px;
+    margin: 120px auto;
+    
+  
+  }
+  .container_position{
+    position: relative;
+    top: 70px;
+    left: 100px;
+    width: 700px;
+  }
+  .container_position h2 {
+    font-size: 68px;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .container_position p {
+    font-size: 24px;
+    color: #fff;
+  }
+  .wrapper2{
+    justify-content: space-between;
+  }
+.wrapper2_right{
+  max-width: 960px;
+}
+  .wrapper2_right h2 {
+    font-size: 68px;
+  }
+
+  .wrapper2_right p {
+    font-size: 22px;
+  }
+.wrapper3_middle img{
+  max-width: 780px;
+}
+  .wrapper3 h2 {
+    font-size: 68px;
+  }
+  .wrapper3_border {
+    padding-bottom: 20px;
+}
+
+  .wrapper3_border h4 {
+    color: #fff;
+    font-size: 16px;
+    padding-left: 20px;
+  }
+.wrapper3_border img{
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  padding-bottom: 0px;
+}
+  .wrapper3_border p {
+    font-size: 16px;
+  }
+
+  .wrapper4 h2 {
+    font-size: 68px;
+  }
+  .wrapper5 img {
+    width: 80%;
+    height: 100%;  
+    margin: auto;
+    text-align: center;
+    display: flex;
+  }
+
+  .wrapper5 h2 {
+    font-size: 68px;
+
+  }
+  .wrapper5 img {
+    width: 90%;
+    max-height: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+  }
+
+  .testimonials_wrapper h2 {
+    font-size: 68px;
+  }
+
+  .tiny_Yet1 {
+    width: 50%;
+    padding: 65px;
+  }
+
+  .tiny_Yet h3 {
+    color: #fff;
+    font-size: 68px;
+  }
+
+  .tiny_Yet p {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 45px;
+  }
+
+  .tiny_Yet_btn {
+    width: 205px;
+    height: 50px;
+    background: linear-gradient(90deg, #009583 100%, #00955f 100%);
+    border: none;
+    border-radius: 25px;
+    /* Set to half of the button height for full rounding */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .wrapper5_bottom img {
+    width: 400px;
+  }
+  .wrapper2_left{
+    text-align: end;
+  }
+  .image2 {
+    max-width: 500px;
+    height: max-content;
+   
+  }
+
+}
+
+@media screen and (min-width:2400px) {
+
+  .wrapper3_middle img{
+    max-width: 780px;
+  }
+  .wrapper3_border p {
+    font-size: 24px;
+  }
+  .wrapper3_border h4 {
+    color: #fff;
+    font-size: 32px;
+    padding-left: 20px;
+  }
+  .new_main_content_wrapper{
+    background-image: url('../public/shop-bg1.webp');
+    background-size: cover; /* This will make sure the background image covers the entire container */
+    background-position: center; /* This centers the background image within the container */
+    max-width: 2200px;
+    height: 900px;
+    margin: 120px auto;
+    
+  
+  }
+  .container_position{
+    position: relative;
+    top: 180px;
+    left: 250px;
+    width: 792px;
+  }
+  .container_position h2 {
+    font-size: 68px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .container_position p {
+    font-size: 28px;
+    color: #fff;
+  }
+  
+  }
+  @media screen and (max-width:1280px)and (min-width: 500px) {
+    .new_main_content_wrapper{
+      display: none;
+    }
+    .wrapper2{
+      display: flex;
+    }
+  }
+@media screen and (max-width:1024px)and (min-width: 500px) {
+  .new_main_content_wrapper{
+    display: none;
+  }
+
+  .wrapper2 {
+    display: flex;
+    width: 100%;
+  }
+  .wrapper1_left {
+    width: 90%;
+  }
+
+  .wrapper1_right {
+    width: 90%;
+    text-align: -webkit-center;
+  }
+
+  .wrapper2 {
+    width: 100%;
+  }
+
+  .wrapper2_right {
+
+    width: 90%;
+  }
+
+  .wrapper2_left {
+
+    width: 90%;
+  }
+
+  .tiny_Yet {
+    /* background-color: #011826; */
+    width: 80%;
+    border: 1px #fff solid;
+    border-radius: 20px;
+    margin: auto;
+    padding: 40px 20px 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+  }
+
+  .tiny_Yet h3 {
+    color: #fff;
+    font-size: 33px;
+  }
+
+  .tiny_Yet p {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .tiny_Yet1 {
+    width: 90%;
+    align-self: center;
+  }
+
+  .tiny_Yet_btn {
+    width: 205px;
+    height: 50px;
+    background: linear-gradient(90deg, #009583 100%, #00955f 100%);
+    border: none;
+    border-radius: 25px;
+    /* Set to half of the button height for full rounding */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .wrapper3_main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .wrapper3_middle {
+    width: 75%;
+  }
+
+  .wrapper3_middle img {
+    width: 90%;
+  }
+
+  .wrapper3_right {
+    width: 75%;
+  }
+
+  .wrapper3_left {
+    width: 75%;
+  }
+
+  .testimonials_wrapper h2 {
+    font-size: 44px;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width:500px)and (min-width: 250px) {
+  .new_main_content_wrapper{
+    display: none;
+  }
+  .wrapper1_left {
+    width: 95%;
+  }
+
+  .wrapper1_left h2 {
+    font-size: 30px;
+  }
+
+  .wrapper1_left p {
+    font-size: 14px;
+  }
+
+  .wrapper1_right {
+    width: 90%;
+  }
+
+  .wrapper1_btn {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 29px 0px;
+  }
+
+  .wrapper1_btn h3 {
+
+    margin: 15px 20px;
+
+  }
+
+  .wrapper2 {
+    display: flex;
+    width: 100%;
+  }
+
+  .wrapper2_right {
+
+    width: 90%;
+  }
+
+  .wrapper2_right h2 {
+    font-size: 30px;
+  }
+
+  .wrapper2_right p {
+    font-size: 14px;
+  }
+
+  .wrapper2_left {
+
+    width: 90%;
+  }
+
+  .wrapper5 h2 {
+    font-size: 30px;
+
+
+  }
+
+  .wrapper1_right {
+    display: block;
+  }
+
+
+
+
+
+  .wrapper3_main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .wrapper3_border p {
+    font-size: 12px;
+  
+  }
+  .wrapper3_middle {
+    width: 85%;
+  }
+
+  .wrapper3_middle img {
+    width: 90%;
+  }
+
+  .wrapper3_right {
+    width: 85%;
+  }
+
+  .wrapper3_left {
+    width: 85%;
+  }
+
+  .wrapper3 h2 {
+    font-size: 30px;
+  }
+
+
+
+
+  .tiny_Yet {
+    /* background-color: #011826; */
+    width: 80%;
+    border: 1px #fff solid;
+    border-radius: 20px;
+    margin: 50 auto;
+    padding: 40px 20px 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+  }
+
+  .tiny_Yet h3 {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .tiny_Yet p {
+    font-size: 12px;
+    color: #fff;
+  }
+
+  .tiny_Yet1 {
+    width: 90%;
+    align-self: center;
+  }
+
+  .tiny_Yet_btn {
+    width: 205px;
+    height: 50px;
+    background: linear-gradient(90deg, #009583 100%, #00955f 100%);
+    border: none;
+    border-radius: 25px;
+    /* Set to half of the button height for full rounding */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .wrapper5 h2 {
+    font-size: 30px;
+
+
+  }
+  .wrapper5 img {
+    width: 90%;
+    height: 100%;
+  
+  
+  
+  }
+  .wrapper5_bottom {
+    margin-top: 20px;
+  }
+
+
+
+  .testimonials_wrapper h2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .wrapper4 h2 {
+    font-size: 30px;
+
+  }
+}
+  @media screen and (max-width:280px) {
+    .new_main_content_wrapper{
+      display: none;
+    }
+    .wrapper5 img{
+      width: 250px;
+      height: 180px;
+    }
+
+
+    .tiny_Yet img{
+      width: 200px;
+      height: 200px;
+    }
+}
