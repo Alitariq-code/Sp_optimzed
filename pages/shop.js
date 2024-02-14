@@ -20,6 +20,8 @@ import { useState, useEffect } from 'react';
 function shop() {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
+  const [loadingState, setLoadingState] = useState(0);
+
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -38,6 +40,8 @@ function shop() {
           '/public/images/Shop/Hardware-Details-icons/Hardware-icons (4).webp',
           '/public/images/Shop/Hardware-Details-icons/Hardware-icons (5).webp',
         ];
+          // Initialize loading state
+          let loadingState = 0;
 
         // Start loading images asynchronously
         const loadImagePromises = allImageNames.map(async (imageName) => {
@@ -51,6 +55,10 @@ function shop() {
 
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
+          loadingState += 100 / allImageNames.length;
+          console.log(loadingState);
+
+          setLoadingState(loadingState);
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
@@ -59,12 +67,13 @@ function shop() {
 
         // Set the loaded images in the state
         setImageNames(loadedImagesData);
-        const timeoutId = setTimeout(() => {
-          setLoading(false);
-        }, 2500);
+        setLoading(false);
+        // const timeoutId = setTimeout(() => {
+        //   setLoading(false);
+        // }, 2500);
 
         // Clear the timeout when the component unmounts
-        return () => clearTimeout(timeoutId);
+        
       } catch (error) {
         console.error('Error loading images:', error);
         setLoading(false);
@@ -80,8 +89,8 @@ function shop() {
     <>
       {loading && (
         <div>
-          <Spinner />
-        </div>
+        <Spinner loading={loadingState} />
+      </div>
       )}
       <div>
         {!loading && (

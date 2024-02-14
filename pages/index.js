@@ -45,6 +45,7 @@ import { useState, useEffect } from 'react';
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
+  const [loadingState, setLoadingState] = useState(0);
   useEffect(() => {
     const fetchImages = async () => {
       try {
@@ -55,6 +56,8 @@ const Home = () => {
 
           '/public/images/Home-images/Elevate-Your-Marksmanship/ElevateYourMarksmanship.gif',
         ];
+        // Initialize loading state
+        let loadingState = 0;
 
         // Start loading images asynchronously
         const loadImagePromises = allImageNames.map(async (imageName) => {
@@ -68,6 +71,11 @@ const Home = () => {
 
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
+          
+          loadingState += 100 / allImageNames.length;
+          console.log(loadingState);
+
+          setLoadingState(loadingState);
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
@@ -76,12 +84,13 @@ const Home = () => {
 
         // Set the loaded images in the state
         setImageNames(loadedImagesData);
-        const timeoutId = setTimeout(() => {
-          setLoading(false);
-        }, 2500);
+        setLoading(false);
+        // const timeoutId = setTimeout(() => {
+        //   setLoading(false);
+        // }, 2500);
 
-        // Clear the timeout when the component unmounts
-        return () => clearTimeout(timeoutId);
+        // // Clear the timeout when the component unmounts
+        // return () => clearTimeout(timeoutId);
       } catch (error) {
         console.error('Error loading images:', error);
         setLoading(false);
@@ -95,9 +104,9 @@ const Home = () => {
   return (
     <>
       {loading && (
-        <div>
-          <Spinner />
-        </div>
+       <div>
+       <Spinner loading={loadingState} />
+     </div>
       )}
       {!loading && (
         <div className={styles.bg_main}>

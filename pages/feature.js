@@ -95,6 +95,7 @@ function Feature() {
   const [isHovered14, setIsHovered14] = useState(false);
   const [isHovered15, setIsHovered15] = useState(false);
   const [isHovered16, setIsHovered16] = useState(false);
+  const [loadingState, setLoadingState] = useState(0);
 
   function handleHover(status, id) {
     let isHovered = status;
@@ -233,6 +234,8 @@ function Feature() {
           '/public/images/Feature Page Images/Quantitative Assessment.webp',
           '/public/images/Feature Page Images/Choose Your Drill.svg',
         ];
+        // Initialize loading state
+        let loadingState = 0;
 
         // Start loading images asynchronously
         const loadImagePromises = allImageNames.map(async (imageName) => {
@@ -246,6 +249,10 @@ function Feature() {
 
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
+          loadingState += 100 / allImageNames.length;
+          console.log(loadingState);
+
+          setLoadingState(loadingState);
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
@@ -254,12 +261,13 @@ function Feature() {
 
         // Set the loaded images in the state
         setImageNames(loadedImagesData);
-        const timeoutId = setTimeout(() => {
-          setLoading(false);
-        }, 2500);
+        setLoading(false);
+        // const timeoutId = setTimeout(() => {
+        //   setLoading(false);
+        // }, 2500);
 
-        // Clear the timeout when the component unmounts
-        return () => clearTimeout(timeoutId);
+        // // Clear the timeout when the component unmounts
+        // return () => clearTimeout(timeoutId);
       } catch (error) {
         console.error('Error loading images:', error);
         setLoading(false);
@@ -273,9 +281,9 @@ function Feature() {
   return (
     <>
       {loading && (
-        <div>
-          <Spinner />
-        </div>
+         <div>
+         <Spinner loading={loadingState} />
+       </div>
       )}
       <div>
         {!loading && (

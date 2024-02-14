@@ -1,9 +1,10 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import animationData from '../../public/Preloader.json'; // Replace with the path to your JSON file
+import animationData from '../../public/Preloader.json'; 
 import styles from '../../styles/spinner.module.css';
 
-const Spinner = () => {
+const Spinner = ({ loading }) => {
+  console.log('satte', loading);
   const spinnerContainerStyle = {
     display: 'flex',
     flexDirection: 'column', // Added flexDirection to display items vertically
@@ -30,7 +31,7 @@ const Spinner = () => {
   return (
     <div style={spinnerContainerStyle} className={styles.spinnerContainer}>
       <Lottie options={lottieOptions} height={300} width={300} />
-      <div style={textStyle}>100%</div>
+      <div style={textStyle}>{loading.toFixed(0)}%</div>
     </div>
   );
 };

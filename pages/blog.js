@@ -13,9 +13,11 @@ import { useState, useEffect } from 'react';
 function blog() {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
+  const [loadingState, setLoadingState] = useState(0);
   useEffect(() => {
     const fetchImages = async () => {
       try {
+        let loadingState = 0;
         const allImageNames = ['/public/images/Beyond Ordinary/banner.webp'];
 
         // Start loading images asynchronously
@@ -30,6 +32,10 @@ function blog() {
 
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
+          loadingState += 100 / allImageNames.length;
+          console.log(loadingState);
+
+          setLoadingState(loadingState);
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
@@ -38,12 +44,13 @@ function blog() {
 
         // Set the loaded images in the state
         setImageNames(loadedImagesData);
-        const timeoutId = setTimeout(() => {
-          setLoading(false);
-        }, 2500);
+        setLoading(false);
+        // const timeoutId = setTimeout(() => {
+        //   setLoading(false);
+        // }, 2500);
 
-        // Clear the timeout when the component unmounts
-        return () => clearTimeout(timeoutId);
+        // // Clear the timeout when the component unmounts
+        // return () => clearTimeout(timeoutId);
       } catch (error) {
         console.error('Error loading images:', error);
         setLoading(false);
@@ -58,8 +65,8 @@ function blog() {
     <>
       {loading && (
         <div>
-          <Spinner />
-        </div>
+        <Spinner loading={loadingState} />
+      </div>
       )}
       <div>
         {!loading && (
