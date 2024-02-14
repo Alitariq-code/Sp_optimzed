@@ -1,24 +1,36 @@
 import React from 'react';
+import Lottie from 'react-lottie';
+import animationData from '../../public/Preloader.json'; // Replace with the path to your JSON file
 import styles from '../../styles/spinner.module.css';
 
 const Spinner = () => {
   const spinnerContainerStyle = {
     display: 'flex',
+    flexDirection: 'column', // Added flexDirection to display items vertically
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
   };
 
-  const imgStyle = {
-    display: 'block',
-    margin: '0 auto',
-    maxWidth: '100%',
-    maxHeight: '100%',
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice', // Adjust this based on your preference
+    },
+  };
+
+  const textStyle = {
+    fontSize: '24px', // Adjust the font size as needed
+    marginTop: '10px',
+    color: 'white', // Adjust the spacing from the Lottie animation
   };
 
   return (
     <div style={spinnerContainerStyle} className={styles.spinnerContainer}>
-      <img src="/preloader.gif" alt="Loading..." style={imgStyle} />
+      <Lottie options={lottieOptions} height={300} width={300} />
+      <div style={textStyle}>100%</div>
     </div>
   );
 };
