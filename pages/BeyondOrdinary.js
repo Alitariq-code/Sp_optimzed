@@ -49,12 +49,7 @@ function Enterprise() {
 
         // Set the loaded images in the state
         setImageNames(loadedImagesData);
-        const timeoutId = setTimeout(() => {
-          setLoading(false);
-        }, 100);
-
-        // Clear the timeout when the component unmounts
-        return () => clearTimeout(timeoutId);
+        setLoading(false);
       } catch (error) {
         console.error('Error loading images:', error);
         setLoading(false);

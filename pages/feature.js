@@ -223,14 +223,14 @@ function Feature() {
           '/public/images/Feature Page Images/Quantitative Assessment.webp',
           '/public/images/Feature Page Images/Choose Your Drill.svg',
         ];
-
+        let loadingState = 0;
         // Start loading images asynchronously
         const loadImagePromises = allImageNames.map(async (imageName) => {
           const response = await fetch(
             `/api/images?imageName=${encodeURIComponent(imageName)}`
           );
           console.log(response);
-          let loadingState = 0;
+
           const blobData = await response.blob();
           // Find the last index of the path separator '/'
           const lastIndex = imageName.lastIndexOf('/');
@@ -249,12 +249,9 @@ function Feature() {
 
         // Set the loaded images in the state
         setImageNames(loadedImagesData);
-        const timeoutId = setTimeout(() => {
-          setLoading(false);
-        }, 100);
 
         // Clear the timeout when the component unmounts
-        return () => clearTimeout(timeoutId);
+        setLoading(false);
       } catch (error) {
         console.error('Error loading images:', error);
         setLoading(false);
