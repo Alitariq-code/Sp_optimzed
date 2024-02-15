@@ -165,7 +165,7 @@ function shop() {
               </div>
             </div>
 
-            <div className={styles.wrapper3}>
+            {/* <div className={styles.wrapper3}>
               <h2>
                 Hardware <span className={styles.color_container}>Details</span>
               </h2>
@@ -328,7 +328,7 @@ function shop() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className={styles.wrapper4}>
               <h2>
