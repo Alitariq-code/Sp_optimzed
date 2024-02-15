@@ -70,6 +70,9 @@ const Home = () => {
           setLoadingState(loadingState);
           return { name: last, data: URL.createObjectURL(blobData) };
         });
+        setTimeout(() => {
+          setLoading(false);
+        }, 2500);
 
         // Wait for all images to be loaded
         const loadedImagesData = await Promise.all(loadImagePromises);
@@ -77,9 +80,7 @@ const Home = () => {
         // Set the loaded images in the state
         setImageNames(loadedImagesData);
         setLoading(false);
-        // const timeoutId = setTimeout(() => {
-        //   setLoading(false);
-        // }, 2500);
+        console.log('stoping');
 
         // // Clear the timeout when the component unmounts
         // return () => clearTimeout(timeoutId);

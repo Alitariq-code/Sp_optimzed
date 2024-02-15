@@ -53,6 +53,9 @@ function shop() {
 
           return { name: last, data: URL.createObjectURL(blobData) };
         });
+        setTimeout(() => {
+          setLoading(false);
+        }, 2500);
 
         // Wait for all images to be loaded
         const loadedImagesData = await Promise.all(loadImagePromises);
