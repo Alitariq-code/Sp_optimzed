@@ -24,6 +24,9 @@ import HardwareIcons3 from '../public/images/Shop//Hardware-Details-icons/Hardwa
 import HardwareIcons4 from '../public/images/Shop/Hardware-Details-icons/Hardware-icons (4).webp';
 import HardwareIcons5 from '../public/images/Shop/Hardware-Details-icons/Hardware-icons (5).webp';
 import PorductImage from '../public/images/Home-images/Product Image.webp';
+import SmallerScreenProductOverview from '../public/images/Shop/SmallerScreenProductOverview.webp';
+import DownloadAppNow from '../public/images/Shop/DownloadAppNow.webp';
+
 function shop() {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
@@ -31,38 +34,14 @@ function shop() {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const allImageNames = [
-          '/public/images/Shop/SmallerScreenProductOverview.webp',
-          '/public/images/Shop/DownloadAppNow.webp',
-
-          '/public/images/Shop/Group 3843.webp',
-        ];
+        const allImageNames = ['/public/images/Shop/Group 3843.webp'];
 
         // Start loading images asynchronously
-        const loadImagePromises = allImageNames.map(async (imageName) => {
-          const response = await fetch(
-            `/api/images?imageName=${encodeURIComponent(imageName)}`
-          );
-          console.log(response);
-          const blobData = await response.blob();
-          // Find the last index of the path separator '/'
-          const lastIndex = imageName.lastIndexOf('/');
 
-          // Extract the substring from the beginning to the last index
-          const last = imageName.substring(0, lastIndex);
-
-          return { name: last, data: URL.createObjectURL(blobData) };
-        });
         setTimeout(() => {
           setLoading(false);
-        }, 2500);
+        }, 2000);
 
-        // Wait for all images to be loaded
-        const loadedImagesData = await Promise.all(loadImagePromises);
-
-        // Set the loaded images in the state
-        setImageNames(loadedImagesData);
-        setLoading(false);
         // const timeoutId = setTimeout(() => {
         //   setLoading(false);
         // }, 2500);
@@ -160,10 +139,11 @@ function shop() {
               </div>
 
               <div className={styles.wrapper2_left}>
-                <img
-                  src={imageNames[0].data}
+                <Image
+                  src={SmallerScreenProductOverview}
                   className={styles.image2}
                   alt="image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -345,10 +325,11 @@ function shop() {
               <h2>
                 Download App <span className={styles.color_container}>Now</span>
               </h2>
-              <img
-                src={imageNames[1].data}
+              <Image
+                src={DownloadAppNow}
                 alt="logo"
                 className={styles.Image5}
+                loading="lazy"
               />
             </div>
 

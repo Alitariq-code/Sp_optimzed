@@ -65,6 +65,11 @@ import sm5Black from '../public/images/Feature Page Images/Feature Page Icons/Sh
 import sm5Green from '../public/images/Feature Page Images/Feature Page Icons/ShotPulse Versatility is Unmatched/Light Green/Group.svg';
 import sm6Black from '../public/images/Feature Page Images/Feature Page Icons/ShotPulse Versatility is Unmatched/Black/Group 4338.svg';
 import sm6Green from '../public/images/Feature Page Images/Feature Page Icons/ShotPulse Versatility is Unmatched/Light Green/Group 4337.svg';
+import Technology from '../public/images/Feature Page Images/Powerhouse of Technology.webp';
+import Unmatched from '../public/images/Feature Page Images/Versatility is Unmatched.webp';
+import Training from '../public/images/Feature Page Images/Gaming Meets Training.webp';
+import Assessment from '../public/images/Feature Page Images/Quantitative Assessment.webp';
+import Drill from '../public/images/Feature Page Images/Choose Your Drill.svg';
 import Spinner from './components/Spinner';
 function Feature() {
   const [isHovered1, setIsHovered1] = useState(false);
@@ -225,41 +230,17 @@ function Feature() {
         ];
         // Initialize loading state
 
-        // Start loading images asynchronously
-        const loadImagePromises = allImageNames.map(async (imageName) => {
-          const response = await fetch(
-            `/api/images?imageName=${encodeURIComponent(imageName)}`
-          );
-          console.log(response);
-          const blobData = await response.blob();
-          // Find the last index of the path separator '/'
-          const lastIndex = imageName.lastIndexOf('/');
-
-          // Extract the substring from the beginning to the last index
-          const last = imageName.substring(0, lastIndex);
-
-          return { name: last, data: URL.createObjectURL(blobData) };
-        });
         setTimeout(() => {
           setLoading(false);
-        }, 2500);
+        }, 3000);
 
-        // Wait for all images to be loaded
-        const loadedImagesData = await Promise.all(loadImagePromises);
-
-        // Set the loaded images in the state
-        setImageNames(loadedImagesData);
-        setLoading(false);
         // const timeoutId = setTimeout(() => {
         //   setLoading(false);
         // }, 2500);
 
         // // Clear the timeout when the component unmounts
         // return () => clearTimeout(timeoutId);
-      } catch (error) {
-        console.error('Error loading images:', error);
-        setLoading(false);
-      }
+      } catch (error) {}
     };
 
     // Start fetching images when the component mounts
@@ -300,11 +281,7 @@ function Feature() {
 
             <div className={styles.wrapper1}>
               <div className={styles.wrapper1_left}>
-                <img
-                  src={imageNames[0].data}
-                  alt="logo"
-                  className={styles.image1}
-                />
+                <Image src={Technology} alt="logo" className={styles.image1} />
               </div>
 
               <div className={styles.wrapper1_right}>
@@ -424,20 +401,22 @@ function Feature() {
               </div>
 
               <div className={styles.wrapper2_right}>
-                <img
-                  src={imageNames[1].data}
+                <Image
+                  src={Unmatched}
                   alt="logo"
                   className={styles.image2}
+                  loading="lazy"
                 />
               </div>
             </div>
 
             <div className={styles.wrapper1}>
               <div className={styles.wrapper1_left}>
-                <img
-                  src={imageNames[2].data}
+                <Image
+                  src={Technology}
                   alt="logo"
                   className={styles.image1}
+                  loading="lazy"
                 />
               </div>
 
@@ -559,20 +538,22 @@ function Feature() {
               </div>
 
               <div className={styles.wrapper2_right}>
-                <img
-                  src={imageNames[1].data}
+                <Image
+                  src={Unmatched}
                   alt="logo"
                   className={styles.image2}
+                  loading="lazy"
                 />
               </div>
             </div>
 
             <div className={styles.wrapper3}>
               <div className={styles.wrapper3_left}>
-                <img
-                  src={imageNames[5].data}
+                <Image
+                  src={Drill}
                   alt="logo"
                   className={styles.image1}
+                  loading="lazy"
                 />
               </div>
 
@@ -1150,10 +1131,11 @@ function Feature() {
 
             <div className={styles.wrapper6}>
               <div className={styles.wrapper6_left}>
-                <img
-                  src={imageNames[4].data}
+                <Image
+                  src={Assessment}
                   alt="logo"
                   className={styles.image8}
+                  loading="lazy"
                 />
               </div>
 
@@ -1314,10 +1296,11 @@ function Feature() {
               </div>
 
               <div className={styles.wrapper8_right}>
-                <img
-                  src={imageNames[3].data}
+                <Image
+                  src={Training}
                   alt="logo"
                   className={styles.image8}
+                  loading="lazy"
                 />
               </div>
             </div>

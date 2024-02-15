@@ -9,7 +9,7 @@ import blog_image from '../public/images/blog-images/blog-1.webp';
 import Spinner from './components/Spinner';
 import { Container } from 'postcss';
 import { useState, useEffect } from 'react';
-
+import banner from '../public/images/Beyond Ordinary/banner.webp';
 function blog() {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
@@ -20,30 +20,11 @@ function blog() {
         const allImageNames = ['/public/images/Beyond Ordinary/banner.webp'];
 
         // Start loading images asynchronously
-        const loadImagePromises = allImageNames.map(async (imageName) => {
-          const response = await fetch(
-            `/api/images?imageName=${encodeURIComponent(imageName)}`
-          );
-          console.log(response);
-          const blobData = await response.blob();
-          // Find the last index of the path separator '/'
-          const lastIndex = imageName.lastIndexOf('/');
 
-          // Extract the substring from the beginning to the last index
-          const last = imageName.substring(0, lastIndex);
-
-          return { name: last, data: URL.createObjectURL(blobData) };
-        });
         setTimeout(() => {
           setLoading(false);
-        }, 2500);
+        }, 1000);
 
-        // Wait for all images to be loaded
-        const loadedImagesData = await Promise.all(loadImagePromises);
-
-        // Set the loaded images in the state
-        setImageNames(loadedImagesData);
-        setLoading(false);
         // const timeoutId = setTimeout(() => {
         //   setLoading(false);
         // }, 2500);

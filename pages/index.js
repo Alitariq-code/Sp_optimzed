@@ -30,6 +30,8 @@ import AppStoreImage from '../public/images/Home-images/Elevate-Your-Marksmanshi
 // Empowering Coaches, Enhancing Training section Product Image
 import tiny_Yet_image from '../public/images/Home-images/Product Image.webp';
 
+import productGif from '../public/images/Home-images/Elevate-Your-Marksmanship/ElevateYourMarksmanship.gif';
+
 import Testimonials from './components/testi';
 import SliderDesktop from './components/slider1';
 import MobileSlider from './components/mobile-slider';
@@ -43,55 +45,9 @@ const Home = () => {
   const [imageNames, setImageNames] = useState([]);
   const [loadingState, setLoadingState] = useState(0);
   useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const allImageNames = [
-          '/public/images/Home-images/Elevate-Your-Marksmanship/ElevateYourMarksmanship.gif',
-        ];
-        // Initialize loading state
-        let loadingState = 0;
-
-        // Start loading images asynchronously
-        const loadImagePromises = allImageNames.map(async (imageName) => {
-          const response = await fetch(
-            `/api/images?imageName=${encodeURIComponent(imageName)}`
-          );
-          console.log(response);
-          const blobData = await response.blob();
-          // Find the last index of the path separator '/'
-          const lastIndex = imageName.lastIndexOf('/');
-
-          // Extract the substring from the beginning to the last index
-          const last = imageName.substring(0, lastIndex);
-
-          loadingState += 100 / allImageNames.length;
-          console.log(loadingState);
-
-          setLoadingState(loadingState);
-          return { name: last, data: URL.createObjectURL(blobData) };
-        });
-        setTimeout(() => {
-          setLoading(false);
-        }, 2500);
-
-        // Wait for all images to be loaded
-        const loadedImagesData = await Promise.all(loadImagePromises);
-
-        // Set the loaded images in the state
-        setImageNames(loadedImagesData);
-        setLoading(false);
-        console.log('stoping');
-
-        // // Clear the timeout when the component unmounts
-        // return () => clearTimeout(timeoutId);
-      } catch (error) {
-        console.error('Error loading images:', error);
-        setLoading(false);
-      }
-    };
-
-    // Start fetching images when the component mounts
-    fetchImages();
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   }, []);
 
   return (
@@ -366,10 +322,11 @@ const Home = () => {
               </div>
             </div>
             <div className={styles.content_wrapper3_right}>
-              <img
-                src={imageNames[0].data}
+              <Image
+                src={productGif}
                 alt="logo"
                 className={styles.MainContent3Image1}
+                loading="lazy"
               />
             </div>
           </div>

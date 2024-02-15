@@ -9,7 +9,8 @@ import PrecisionPerfectedImage from '../public/images/Beyond Ordinary/PrecisionP
 import GooglePlayImage from '../public/images/Shop/GooglePlayImage.webp';
 import AppStoreImage from '../public/images/Shop/AppStoreImage.webp';
 import styles from '../styles/enterprise.module.css';
-
+import banner from '../public/images/Beyond Ordinary/banner.webp';
+import download from '../public/images/Shop/DownloadAppNow.webp';
 function Enterprise() {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
@@ -23,30 +24,12 @@ function Enterprise() {
           '/public/images/Shop/DownloadAppNow.webp',
         ];
 
-        const loadImagePromises = allImageNames.map(async (imageName) => {
-          const response = await fetch(
-            `/api/images?imageName=${encodeURIComponent(imageName)}`
-          );
-          console.log(response);
-          const blobData = await response.blob();
-          // Find the last index of the path separator '/'
-          const lastIndex = imageName.lastIndexOf('/');
-
-          // Extract the substring from the beginning to the last index
-          const last = imageName.substring(0, lastIndex);
-
-          return { name: last, data: URL.createObjectURL(blobData) };
-        });
         setTimeout(() => {
           setLoading(false);
-        }, 2500);
-
-        // Wait for all images to be loaded
-        const loadedImagesData = await Promise.all(loadImagePromises);
+        }, 1500);
 
         // Set the loaded images in the state
-        setImageNames(loadedImagesData);
-        setLoading(false);
+
         // const timeoutId = setTimeout(() => {
         //   setLoading(false);
         // }, 2500);
@@ -83,10 +66,11 @@ function Enterprise() {
                 The Future of Shooting{' '}
                 <span className={styles.color_container}>Training</span>
               </h2>
-              <img
-                src={imageNames[0].data}
+              <Image
+                src={banner}
                 alt="logo"
                 className={styles.image1}
+                loading="lazy"
               />
             </div>
 
@@ -164,10 +148,11 @@ function Enterprise() {
               <h2>
                 Download App <span className={styles.color_container}>Now</span>
               </h2>
-              <img
-                src={imageNames[1].data}
+              <Image
+                src={download}
                 alt="logo"
                 className={styles.Image5}
+                loading="lazy"
               />
             </div>
 
