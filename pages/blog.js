@@ -13,11 +13,10 @@ import { useState, useEffect } from 'react';
 function blog() {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
-  const [loadingState, setLoadingState] = useState(0);
+
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        let loadingState = 0;
         const allImageNames = ['/public/images/Beyond Ordinary/banner.webp'];
 
         // Start loading images asynchronously
@@ -32,10 +31,7 @@ function blog() {
 
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
-          loadingState += 100 / allImageNames.length;
-          console.log(loadingState);
 
-          setLoadingState(loadingState);
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
@@ -65,8 +61,8 @@ function blog() {
     <>
       {loading && (
         <div>
-        <Spinner loading={loadingState} />
-      </div>
+          <Spinner />
+        </div>
       )}
       <div>
         {!loading && (

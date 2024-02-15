@@ -14,8 +14,6 @@ import keyFeaterIcon2 from '../public/images/Home-images/key-Feater-Image/keyFea
 import keyFeaterIcon3 from '../public/images/Home-images/key-Feater-Image/keyFeaterIcon3.webp';
 import keyFeaterIcon4 from '../public/images/Home-images/key-Feater-Image/keyFeaterIcon4.webp';
 
-
-
 // Tiny Yet Mighty section image for tablet and mobile. MB-Tiny-Yet-wrapper
 import SmallerScreenTinyYetImage from '../public/images/Home-images/SmallerScreenTinyYetImage.webp';
 
@@ -28,8 +26,6 @@ import SmallerScreenUltimateShooting from '../public/images/Home-images/SmallerS
 // Elevate Your Marksmanship wrapper Google play and App store images
 import GooglePlayImage from '../public/images/Home-images/Elevate-Your-Marksmanship/GooglePlayImage.webp';
 import AppStoreImage from '../public/images/Home-images/Elevate-Your-Marksmanship/AppStoreImage.webp';
-
-
 
 // Empowering Coaches, Enhancing Training section Product Image
 import tiny_Yet_image from '../public/images/Home-images/Product Image.webp';
@@ -50,10 +46,6 @@ const Home = () => {
     const fetchImages = async () => {
       try {
         const allImageNames = [
-          'public/images/Home-images/key-Feater-Image/keyFeaterHeroImage.webp',
-          'public/images/Home-images/key-Feater-Image/keyFeaterIcon1.webp',
-          'public/images/Home-images/key-Feater-Image/keyFeaterIcon2.webp',
-
           '/public/images/Home-images/Elevate-Your-Marksmanship/ElevateYourMarksmanship.gif',
         ];
         // Initialize loading state
@@ -71,7 +63,7 @@ const Home = () => {
 
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
-          
+
           loadingState += 100 / allImageNames.length;
           console.log(loadingState);
 
@@ -104,9 +96,9 @@ const Home = () => {
   return (
     <>
       {loading && (
-       <div>
-       <Spinner loading={loadingState} />
-     </div>
+        <div>
+          <Spinner loading={loadingState} />
+        </div>
       )}
       {!loading && (
         <div className={styles.bg_main}>
@@ -161,8 +153,8 @@ const Home = () => {
 
           <div className={styles.Key_Features_wrapper}>
             <div className={styles.Key_Features_image_wrapper}>
-              <img
-                src={imageNames[0].data}
+              <Image
+                src={keyFeaterHeroImage}
                 alt="logo"
                 className={styles.keyFeater_image}
               />
@@ -178,8 +170,8 @@ const Home = () => {
                 <div className={styles.KF_main_sub_wrapper}>
                   {/* 1 */}
                   <div className={styles.Key_Features_sub_wrapper}>
-                    <img
-                      src={imageNames[1].data}
+                    <Image
+                      src={keyFeaterIcon1}
                       alt="logo"
                       className={styles.keyFeater_image1}
                     />
@@ -192,8 +184,8 @@ const Home = () => {
 
                   {/* 2 */}
                   <div className={styles.Key_Features_sub_wrapper}>
-                    <img
-                      src={imageNames[2].data}
+                    <Image
+                      src={keyFeaterIcon2}
                       alt="logo"
                       className={styles.keyFeater_image2}
                     />
@@ -374,7 +366,7 @@ const Home = () => {
             </div>
             <div className={styles.content_wrapper3_right}>
               <img
-                src={imageNames[3].data}
+                src={imageNames[0].data}
                 alt="logo"
                 className={styles.MainContent3Image1}
               />
@@ -397,7 +389,6 @@ const Home = () => {
             </div>
 
             <div>
-  
               <Image
                 src={tiny_Yet_image}
                 alt="logo"

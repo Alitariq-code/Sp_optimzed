@@ -6,24 +6,24 @@ import Footer from './components/footer';
 import Image from 'next/image';
 import ImageGallery from '../pages/components/shop_slider';
 import styles from '../styles/shop.module.css';
-
+import Image2 from '../public/images/Shop/wrapper2.webp';
+import Image5 from '../public/images/Shop/Group 3897 (1).webp';
 import tiny_Yet_image from '../public/images/Home-images/Product Image.webp';
-// import hardware from '../public/images/Shop/Hardware-Details-icons'
-
+import Image3 from '../public/images/Shop/Group 982.webp';
+import Image4 from '../public/images/Shop/Group 983.webp';
+import Image6 from '../public/images/Shop/Group 3843.webp';
+import Image7 from '../public/images/Shop/Group.webp';
+import Group2 from '../public/images/Shop/Group2.webp';
+import Group3 from '../public/images/Shop/Group3.webp';
+import Group4 from '../public/images/Shop/Group4.webp';
+import Group5 from '../public/images/Shop/Group5.webp';
+import Group6 from '../public/images/Shop/Group6.webp';
 import Testimonials from './components/testi';
 import TablePage from './components/table';
 import Link from 'next/link';
 import Spinner from './components/Spinner';
 import { useState, useEffect } from 'react';
-import AppStoreImage from '../public/images/Shop/AppStoreImage.webp';
-import GooglePlayImage from '../public/images/Shop/GooglePlayImage.webp';
-import HardwareIcons6 from '../public/images/Shop/Hardware-Details-icons/Hardware-icons (6).webp';
-import HardwareIcons1 from '../public/images/Shop/Hardware-Details-icons/Hardware-icons (1).webp';
-import HardwareIcons2 from '../public/images/Shop/Hardware-Details-icons/Hardware-icons (2).webp';
-import HardwareIcons3 from '../public/images/Shop//Hardware-Details-icons/Hardware-icons (3).webp';
-import HardwareIcons4 from '../public/images/Shop/Hardware-Details-icons/Hardware-icons (4).webp';
-import HardwareIcons5 from '../public/images/Shop/Hardware-Details-icons/Hardware-icons (5).webp';
-import PorductImage from '../public/images/Home-images/Product Image.webp';
+
 function shop() {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
@@ -32,10 +32,18 @@ function shop() {
     const fetchImages = async () => {
       try {
         const allImageNames = [
-          '/public/images/Shop/SmallerScreenProductOverview.webp',
-          '/public/images/Shop/DownloadAppNow.webp',
-
+          '/public/images/Shop/wrapper2.webp',
+          '/public/images/Shop/Group 3897 (1).webp',
+          '/public/images/Shop/Group 982.webp',
+          '/public/images/Shop/Group 983.webp',
+          '/public/images/Home-images/Product Image.webp',
+          '/public/images/Shop/Group6.webp',
+          '/public/images/Shop/Group.webp',
+          '/public/images/Shop/Group2.webp',
+          '/public/images/Shop/Group3.webp',
           '/public/images/Shop/Group 3843.webp',
+          '/public/images/Shop/Group4.webp',
+          '/public/images/Shop/Group5.webp',
         ];
 
         // Start loading images asynchronously
@@ -50,7 +58,6 @@ function shop() {
 
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
-
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
@@ -59,12 +66,12 @@ function shop() {
 
         // Set the loaded images in the state
         setImageNames(loadedImagesData);
-        setLoading(false);
-        // const timeoutId = setTimeout(() => {
-        //   setLoading(false);
-        // }, 2500);
+        const timeoutId = setTimeout(() => {
+          setLoading(false);
+        }, 2500);
 
         // Clear the timeout when the component unmounts
+        return () => clearTimeout(timeoutId);
       } catch (error) {
         console.error('Error loading images:', error);
         setLoading(false);
@@ -109,6 +116,8 @@ function shop() {
                   <Link href="/coming-soon" passHref>
                     <button className={styles.btn_cart}>Add To Cart</button>
                   </Link>
+
+                  <h3>$48.00</h3>
                 </div>
               </div>
 
@@ -172,11 +181,10 @@ function shop() {
               <div className={styles.wrapper3_main}>
                 <div className={styles.wrapper3_left}>
                   <div className={styles.wrapper3_border}>
-                    <Image
-                      src={HardwareIcons1}
+                    <img
+                      src={imageNames[6].data}
                       className={styles.image7}
                       alt="image"
-                      loading="lazy"
                     />
                     <h4>Unparalleled Precision and Sensitivity:</h4>
 
@@ -204,8 +212,8 @@ function shop() {
                   </div>
 
                   <div className={styles.wrapper3_border}>
-                    <Image
-                      src={HardwareIcons2}
+                    <img
+                      src={imageNames[7].data}
                       className={styles.image7}
                       alt="image"
                       loading="lazy"
@@ -228,11 +236,10 @@ function shop() {
                   </div>
 
                   <div className={styles.wrapper3_border}>
-                    <Image
-                      src={HardwareIcons3}
+                    <img
+                      src={imageNames[8].data}
                       className={styles.image7}
                       alt="image"
-                      loading="lazy"
                     />
                     <h4>Powerful Microprocessor </h4>
 
@@ -253,13 +260,22 @@ function shop() {
                   </div>
                 </div>
 
+                <div className={styles.wrapper3_middle}>
+                  <img
+                    src={imageNames[9].data}
+                    className={styles.image6}
+                    alt="image"
+                    // loading="lazy"
+                  />
+                </div>
+
                 <div className={styles.wrapper3_right}>
                   <div className={styles.wrapper3_border}>
-                    <Image
-                      src={HardwareIcons4}
+                    <img
+                      src={imageNames[10].data}
                       className={styles.image7}
                       alt="image"
-                      loading="lazy"
+                      // loading="lazy"
                     />
                     <h4>Lightweight and Unobtrusive Design </h4>
 
@@ -280,11 +296,10 @@ function shop() {
                   </div>
 
                   <div className={styles.wrapper3_border}>
-                    <Image
-                      src={HardwareIcons5}
+                    <img
+                      src={imageNames[11].data}
                       className={styles.image7}
                       alt="image"
-                      loading="lazy"
                     />
                     <h4>User-Friendly Experience </h4>
 
@@ -302,11 +317,10 @@ function shop() {
                   </div>
 
                   <div className={styles.wrapper3_border}>
-                    <Image
-                      src={HardwareIcons6}
+                    <img
+                      src={imageNames[5].data}
                       className={styles.image7}
                       alt="image"
-                      loading="lazy"
                     />
                     <h4>Transforming Shooting Practice </h4>
 
@@ -350,17 +364,17 @@ function shop() {
             </div>
 
             <div className={styles.wrapper5_bottom}>
-              <Image
-                src={AppStoreImage}
+              <img
+                src={imageNames[2].data}
                 alt="logo"
                 className={styles.Image3}
-                loading="lazy"
+                // loading="lazy"
               />
-              <Image
-                src={GooglePlayImage}
+              <img
+                src={imageNames[3].data}
                 alt="logo"
                 className={styles.Image4}
-                loading="lazy"
+                // loading="lazy"
               />
             </div>
 
@@ -378,8 +392,8 @@ function shop() {
               </div>
 
               <div>
-                <Image
-                  src={PorductImage}
+                <img
+                  src={imageNames[4].data}
                   alt="logo"
                   className={tiny_Yet_image}
                   loading="lazy"

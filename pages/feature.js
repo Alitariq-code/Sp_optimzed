@@ -8,9 +8,6 @@ import styles from '../styles/feature.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 
-
-
-
 import image7 from '../public/images/Feature Page Images/Feature Page Icons/Choose Your Drill For Shooting Icons/Light Green/Customize 1.svg';
 import image8 from '../public/images/Feature Page Images/Feature Page Icons/Choose Your Drill For Shooting Icons/Light Green/svgexport-20 1.svg';
 import image9 from '../public/images/Feature Page Images/Feature Page Icons/Choose Your Drill For Shooting Icons/Light Green/Group.svg';
@@ -26,7 +23,6 @@ import chose6 from '../public/images/Feature Page Images/Feature Page Icons/Choo
 
 import image12 from '../public/images/Feature Page Images/Feature Page Icons/Choose Your Drill For Shooting Icons/Light Green/smart connections 1.svg';
 
-
 import image15 from '../public/images/Feature Page Images/Feature Page Icons/Progress Requires Section Icons/Light Green/Vector.svg';
 import image16 from '../public/images/Feature Page Images/Feature Page Icons/Progress Requires Section Icons/Light Green/Vector-1.svg';
 import image17 from '../public/images/Feature Page Images/Feature Page Icons/Progress Requires Section Icons/Light Green/Vector-2.svg';
@@ -39,15 +35,11 @@ import last4 from '../public/images/Feature Page Images/Feature Page Icons/Progr
 
 import image19 from '../public/images/Feature Page Images/Group 4315.webp';
 
+import CampareTable from '../public/images/Feature Page Images/CampareTable-bg-Image.svg';
 
-import CampareTable  from '../public/images/Feature Page Images/CampareTable-bg-Image.svg';
-
-
-// For Coaches vs ShotPulse Member section images 
+// For Coaches vs ShotPulse Member section images
 import image21 from '../public/images/Feature Page Images/left.svg';
 import image22 from '../public/images/Feature Page Images/right.svg';
-
-
 
 // key Features Mobile Section images
 import imagekey01 from '../public/images/key-feature-mobile/1-key-section-mobile.svg';
@@ -58,9 +50,7 @@ import imagekey04 from '../public/images/key-feature-mobile/4-key-section-mobile
 import imagekey05 from '../public/images/key-feature-mobile/5-key-section-mobile.svg';
 import imagekey06 from '../public/images/key-feature-mobile/6-key-section-mobile.svg';
 
-
-
-// 
+//
 
 import sm1Black from '../public/images/Feature Page Images/Feature Page Icons/ShotPulse Versatility is Unmatched/Black/Group.svg';
 import sm1Green from '../public/images/Feature Page Images/Feature Page Icons/ShotPulse Versatility is Unmatched/Light Green/Group-1.svg';
@@ -95,7 +85,6 @@ function Feature() {
   const [isHovered14, setIsHovered14] = useState(false);
   const [isHovered15, setIsHovered15] = useState(false);
   const [isHovered16, setIsHovered16] = useState(false);
-  const [loadingState, setLoadingState] = useState(0);
 
   function handleHover(status, id) {
     let isHovered = status;
@@ -235,7 +224,6 @@ function Feature() {
           '/public/images/Feature Page Images/Choose Your Drill.svg',
         ];
         // Initialize loading state
-        let loadingState = 0;
 
         // Start loading images asynchronously
         const loadImagePromises = allImageNames.map(async (imageName) => {
@@ -249,10 +237,7 @@ function Feature() {
 
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
-          loadingState += 100 / allImageNames.length;
-          console.log(loadingState);
 
-          setLoadingState(loadingState);
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
@@ -281,9 +266,9 @@ function Feature() {
   return (
     <>
       {loading && (
-         <div>
-         <Spinner loading={loadingState} />
-       </div>
+        <div>
+          <Spinner />
+        </div>
       )}
       <div>
         {!loading && (

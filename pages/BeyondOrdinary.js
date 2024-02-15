@@ -5,27 +5,24 @@ import Footer from './components/footer';
 import Spinner from './components/Spinner';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import image1 from '../public/images/Beyond Ordinary/banner.webp';
+import PrecisionPerfectedImage from '../public/images/Beyond Ordinary/PrecisionPerfectedImage.webp';
+import GooglePlayImage from '../public/images/Shop/GooglePlayImage.webp';
+import AppStoreImage from '../public/images/Shop/AppStoreImage.webp';
 import styles from '../styles/enterprise.module.css';
 
 function Enterprise() {
   const [loading, setLoading] = useState(true);
   const [imageNames, setImageNames] = useState([]);
-  const [loadingState, setLoadingState] = useState(0);
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
         const allImageNames = [
           '/public/images/Beyond Ordinary/banner.webp',
-          '/public/images/Beyond Ordinary/PrecisionPerfectedImage.webp',
-          '/public/images/Shop/AppStoreImage.webp',
-          '/public/images/Shop/GooglePlayImage.webp',
+
           '/public/images/Shop/DownloadAppNow.webp',
         ];
-  // Initialize loading state
-       let loadingState = 0;
-        // Start loading images asynchronously
+
         const loadImagePromises = allImageNames.map(async (imageName) => {
           const response = await fetch(
             `/api/images?imageName=${encodeURIComponent(imageName)}`
@@ -37,10 +34,7 @@ function Enterprise() {
 
           // Extract the substring from the beginning to the last index
           const last = imageName.substring(0, lastIndex);
-          loadingState += 100 / allImageNames.length;
-          console.log(loadingState);
 
-          setLoadingState(loadingState);
           return { name: last, data: URL.createObjectURL(blobData) };
         });
 
@@ -70,8 +64,8 @@ function Enterprise() {
     <>
       {loading && (
         <div>
-        <Spinner loading={loadingState} />
-      </div>
+          <Spinner />
+        </div>
       )}
 
       <div>
@@ -154,10 +148,11 @@ function Enterprise() {
               </div>
 
               <div className={styles.wrapper2_right}>
-                <img
-                  src={imageNames[1].data}
+                <Image
+                  src={PrecisionPerfectedImage}
                   alt="logo"
                   className={styles.image1}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -167,22 +162,24 @@ function Enterprise() {
                 Download App <span className={styles.color_container}>Now</span>
               </h2>
               <img
-                src={imageNames[4].data}
+                src={imageNames[1].data}
                 alt="logo"
                 className={styles.Image5}
               />
             </div>
 
             <div className={styles.wrapper5_bottom}>
-              <img
-                src={imageNames[2].data}
+              <Image
+                src={AppStoreImage}
                 alt="logo"
                 className={styles.Image3}
+                loading="lazy"
               />
-              <img
-                src={imageNames[3].data}
+              <Image
+                src={GooglePlayImage}
                 alt="logo"
                 className={styles.Image4}
+                loading="lazy"
               />
             </div>
 
